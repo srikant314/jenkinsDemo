@@ -29,41 +29,35 @@ public class JenkinsDemo
         driver.quit();
     }
 
-    @Test
+  @Test
     public void testCasePassed()
     {
         try {
-              WebElement elem = driver.findElement(By.xpath("//form[@id='login_form']"));  
-              System.out.println(elem.getText());
-            }
-       catch(Exception e) {
-                    // do nothing
-                }
-        
+        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
+        }
+        catch (exception e) {
+        }
     }
 
     @Test
     public void testCaseFailed()
-    {   
+    {
         try {
-              WebElement elem = driver.findElement(By.xpath("//form[@id='failed case']"));  
-              System.out.println(elem.getText());
-            }
-       catch(Exception e) {
-                    // do nothing
-                }
+        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='failed case']")).isDisplayed());
+        }
+       catch (exception e) {
+        }
+        
     }
 
     @Ignore
     @Test
     public void testCaseIgnored()
     {
-        try {
-              WebElement elem = driver.findElement(By.xpath("//form[@id='ignored case']"));  
-              System.out.println(elem.getText());
-            }
-       catch(Exception e) {
-                    // do nothing
-                }
+         try {
+         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='ignored case']")).isDisplayed());
+         }
+        catch (exception e) {
+        }
     }
 }
