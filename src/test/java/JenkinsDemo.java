@@ -35,7 +35,7 @@ public class JenkinsDemo
         try {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
         }
-        catch (exception e) {
+        catch (Exception e) {
         }
     }
 
@@ -45,7 +45,7 @@ public class JenkinsDemo
         try {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@id='failed case']")).isDisplayed());
         }
-       catch (exception e) {
+       catch (Exception e) {
         }
         
     }
@@ -57,7 +57,7 @@ public class JenkinsDemo
          try {
          Assert.assertTrue(driver.findElement(By.xpath("//form[@id='ignored case']")).isDisplayed());
          }
-        catch (exception e) {
+        catch (Exception e) {
         }
     }
 }
